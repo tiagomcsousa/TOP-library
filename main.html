@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <title>TOP Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="header-title">TOP Library</h1>
+    </header>
+
+    <div class="add-book-btn-container">
+        <button class="btn-configd" onClick=initAddNewBook()>Add new book</button>
+    </div>
+
+    <div class="popup-form">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <br><br>
+            <span>
+                Name of the book: &nbsp;
+                <input type="text" id="id-input-book" placeholder="The name of the book">
+            </span>
+            <span>
+                Author: &nbsp;
+                <input type="text" id="id-input-author" placeholder="Book's author"> 
+            </span>
+            <span>
+                Read?
+                <input type="checkbox" id="id-read">
+            </span>
+            <span>
+                <button id="add-book" onclick="addBook()">Add book</button>
+            </span>
+        </div>
+    </div>
+
+    <div id="empty-library" style="text-align: center;">
+        Looks like you don't have added any book to your library...
+    </div>
+    <div id="display-books"></div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
